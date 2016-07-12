@@ -45,12 +45,12 @@
 				<h2>Topics</h2>
 				<ul class="list-unstyled">
 					{{#each lesson.topics}}
-						<li class="topic_title truncate list-toggle collapsed"  id="list_{{id}}" style="background-color:{{color}};">
+						{{#unless topics}}<a class="topic_link" href="/lessons/{{id}}">{{/unless}}
+						<li class="topic_title truncate {{#if topics}}list-toggle collapsed{{/if}}"  id="list_{{id}}" style="background-color:{{color}};">
 							{{#if topics}}<span class="glyphicon glyphicon-chevron-up" aria-hidden="true" id="toggle_{{id}}"></span>{{/if}}
 							&nbsp;{{title}}&nbsp;
 
-							{{#if topics}}<a class="btn lesson-btn pull-right" href="/lessons/{{id}}">VIEW LESSONS ></a>
-							{{else}}<a href="/lessons/{{id}}"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>{{/if}}
+							{{#if topics}}<a class="btn lesson-btn pull-right" href="/lessons/{{id}}">VIEW LESSONS ></a>{{else}}>{{/if}}
 						</li>
 						<ul class="sublist subtopic-sublist" id="sublist_{{id}}">
 							{{#each topics}}
@@ -59,6 +59,7 @@
 							</a>
 							{{/each}}
 						</ul>
+						{{#unless topics}}</a>{{/unless}}
 					{{else}}
 						<li class="text-center"><em>This topic does not have any subtopics.</em></li>
 					{{/each}}
