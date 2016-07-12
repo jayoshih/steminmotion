@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html>
+{{> head}}
+
+<body>
+	{{> navbar}}
+	<div class="wrapper container" id="lesson-styles">
+		<div id="breadcrumb-wrapper">
+			<ul id="lesson-breadcrumb">
+				<li><a href="/home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+				<li><a href="/lessons">Lessons</a></li>
+				{{#if slice}}<li><a href="{{slice-url}}">{{slice}}</a></li>{{/if}}
+				{{#if topic}}<li><a href="{{topic-url}}">{{topic}}</a></li>{{/if}}
+			</ul>
+		</div>
+		<h1>{{lesson.title}}</h1>
+		<div class="lesson-area text-center">
+			<iframe class="main-video" src="{{lesson.video}}" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<p class="lesson_description">{{lesson.description}}</p>
+		<br/>
+		<hr/>
+		{{#if isLeaf}}
+			<h2><a class="btn submit_peer_video pull-right">Submit a Video!</a>Peer Videos</h2>
+			<br/>
+				<div class="peer_video_nav" id="peer-video-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true" value="scrollLeft"></span></div>
+				<div class="peer_video_wrapper">
+					<div class="row peer_video_area">
+						{{#each lesson.peer-videos}}
+							<div class="col-sm-3 peer_video text-center" >
+								<h4 class="truncate">{{title}}</h4>
+								<p class="truncate">By {{peer}}</p>
+								<iframe src="{{video}}" frameborder="0" allowfullscreen></iframe>
+								<a class="btn btn-go">View Fullscreen</a>
+							</div>
+						{{else}}
+							<p class="text-center"><em>No peers have submitted anything yet.</em></p>
+						{{/each}}
+					</div>
+				</div>
+				<div class="peer_video_nav" id="peer-video-right"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true" value="scrollRight"></span></div>
+		{{else}}
+			<div class="topiclist-wrapper">
+				<h2>Topics</h2>
+				<ul class="list-unstyled">
+					{{#each lesson.topics}}
+						<li class="topic_title truncate list-toggle collapsed"  id="list_{{id}}" style="background-color:{{color}};">
+							{{#if topics}}<span class="glyphicon glyphicon-chevron-up" aria-hidden="true" id="toggle_{{id}}"></span>{{/if}}
+							&nbsp;{{title}}&nbsp;
+
+							{{#if topics}}<a class="btn lesson-btn pull-right" href="/lessons/{{id}}">VIEW LESSONS ></a>
+							{{else}}<a href="/lessons/{{id}}"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>{{/if}}
+						</li>
+						<ul class="sublist subtopic-sublist" id="sublist_{{id}}">
+							{{#each topics}}
+							<a class="lesson_link" href="/lessons/{{id}}">
+								<li class="subtopic_title truncate">{{title}} ></li>
+							</a>
+							{{/each}}
+						</ul>
+					{{else}}
+						<li class="text-center"><em>This topic does not have any subtopics.</em></li>
+					{{/each}}
+				</ul>
+			</div>
+		{{/if}}
+	</div>
+	{{> footer}}
+</body>
+</html>

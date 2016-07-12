@@ -1,0 +1,23 @@
+<!doctype html>
+
+<html>
+{{> head}}
+
+<body>
+	{{> navbar}}
+	<div class="wrapper container">
+		<h1>Submit a Video</h1>
+		<h4>Create a video, post it on youtube, and enter the link here!</h4>
+		<hr/>
+		<form>
+			<input type="text" placeholder="Your Name (e.g. 'John Doe')"/><br/>
+			<input type="text" placeholder ="Title of Video (e.g. 'My lesson on physics')"/><br/>
+			<input type="text" placeholder ="Video URL (e.g. 'https://youtube.com/XXXXX')" id="submit_url"/><br/>
+			<input type="submit" value="Submit Video" class="btn btn-go" id="submit_video"/>
+		</form>
+		<!--<h4>A preview of your video will be displayed here if url is valid:</h4>
+		<iframe width="300" height="200" id="submit_preview" src="" frameborder="0" allowfullscreen></iframe>-->
+	</div>
+	{{> footer}}
+</body>
+</html>

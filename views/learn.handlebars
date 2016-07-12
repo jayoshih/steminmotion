@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+{{> head}}
+
+<body>
+	{{> navbar}}
+	<div class="wrapper container">
+		<h1><a href="/lessons"><span class="glyphicon glyphicon-chevron-left back_button" aria-hidden="true"></span></a> &nbsp;{{title}}</h1>
+		<h4 class="lesson_subheading">Look for clues in the following videos</h4>
+
+
+		<hr/>
+		<iframe class="main-video" width="560" height="315" src="{{url}}" frameborder="0" allowfullscreen></iframe>
+		<br/>
+
+		<hr/>
+		<h2>Peer Videos:</h2>
+		<div class="row peer_video_area">
+			{{#each peervideos}}
+				<div class="col-s-3 peer_video text-center" >
+					<h4 class="truncate">{{title}}</h4>
+					<p class="truncate">By {{name}}</p>
+					<iframe width="300" height="200" src="{{url}}" frameborder="0" allowfullscreen></iframe>
+					<br/>
+					<!--<a class="btn btn-go">Go to Video &gt;</a>-->
+				</div>
+			{{else}}
+				<em>No peers have submitted anything yet.</em>
+			{{/each}}
+		</div>
+		<hr/>
+		<h2>Practice Set</h2>
+		{{#each questions}}
+			<h5 class="practice_question">{{question}}</h5>
+			<input type="text" placeholder="Type your answer here" class="answer_box"/>
+		{{else}}<em>No questions found.</em>
+		{{/each}}
+		<br/>
+		<a class="btn btn-go solve_mystery">Solve this Mystery!</a>
+	</div>
+	{{> footer}}
+</body>
+</html>

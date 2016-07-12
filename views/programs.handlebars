@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html>
+{{> head}}
+
+<body>
+	{{> navbar}}
+	<div class="wrapper container">
+		<h1>Programs</h1>
+		<div id="program_navigation">
+			<a class="btn program-btn" id="stem_button">STEM Program</a>
+			<a class="btn program-btn" id="race_button">Soapbox Derby Race</a>
+			<a class="btn program-btn" id="development_button">Professional Development</a>
+		</div>
+		<div id="default_panel" class="panel_program">
+			<h1>DEFAULT</h1>
+		</div>
+		{{> stem}}
+		{{> race}}
+		{{> development}}
+	</div>
+	<script src="/js/programs.js"></script>
+	{{> footer}}
+
+</body>
+</html>

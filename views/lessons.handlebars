@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html>
+{{> head}}
+
+<body>
+	{{> navbar}}
+	<div class="wrapper container" id="lessons-styles">
+		<h1>Ready, Set, Go!</h1>
+		<hr/>
+		<ul class="list-unstyled">
+		{{#each slices}}
+			<li class="lesson" id="lesson_{{id}}" style="background-color:{{color}}; border-bottom:4px solid {{color}};">
+				<h3 class="slice_title truncate list-toggle collapsed" id="list_{{id}}">
+					<a class="btn lesson-btn pull-right" href="/lessons/{{id}}">VIEW LESSONS >></a>
+					<span class="glyphicon glyphicon-chevron-up" aria-hidden="true" id="toggle_{{id}}"></span>
+					&nbsp;{{title}}
+				</h3>
+				<ul class="list-unstyled sublist topic_sublist" id="sublist_{{id}}">
+					{{#each topics}}
+					<li class="topic_title truncate list-toggle collapsed"  id="list_{{id}}" style="background-color:{{color}};">
+						<a class="btn lesson-btn pull-right" href="/lessons/{{id}}">VIEW ></a>
+						<span class="glyphicon glyphicon-chevron-up" aria-hidden="true" id="toggle_{{id}}"></span>
+						&nbsp;{{title}}
+					</li>
+					<ul class="sublist subtopic-sublist" id="sublist_{{id}}">
+						{{#each topics}}
+						<a class="lesson_link" href="/lessons/{{id}}">
+							<li class="subtopic_title truncate">{{title}} ></li>
+						</a>
+						{{/each}}
+					</ul>
+					{{/each}}
+				</ul>
+			</li>
+		{{else}}<h2>No lessons to display.</h2>
+		{{/each}}
+		</ul>
+	</div>
+	{{> footer}}
+</body>
+</html>

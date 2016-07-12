@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html>
+{{> head}}
+
+<body>
+	{{> navbar}}
+	<div class="main-wrapper wrapper container" id="home-styles">
+		<a href="/development" class="pull-right">Switch to teacher view (testing only)</a>
+		<div class="colored-block">
+			<h1 class="text-center" id="main-title">Welcome back, [student name]</h1>
+			<!-- <iframe width="560" height="315" class="main-video" src="https://www.youtube.com/embed/rBi01rgRVNE" frameborder="0" allowfullscreen></iframe> -->
+		</div>
+		<div class="row">
+			<div class="col-md-6 red dashboard-panel">
+				<h2>
+					<span class="glyphicon glyphicon-road" aria-hidden="true"></span>
+					&nbsp; Learn!
+					<a class="btn learn-btn" href="/lessons">GO >>></a>
+				</h2>
+				<div class="dashboard-wrapper white">
+					<h4>Ready to Learn Topics</h4>
+						<ul class="list-unstyled main-list">
+							<li>
+								<h6 id="list_1" class="list-toggle collapsed"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span> Equivalent Fractions (2 Topics)</h6>
+								<ul id="sublist_1">
+									<li><a href="/lessons/FD-EF-1">Understanding equivalent fractions ></a></li>
+									<li><a href="/lessons/FD-EF-2">Introduction to fractions ></a></li>
+								</ul>
+							</li>
+							<li >
+								<h6 id="list_2" class="list-toggle collapsed"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span> Ordering Fractions (2 Topics)</h6>
+								<ul id="sublist_2">
+									<li><a href="/lessons/FD-OF-0">Ordering fractions with the same denominator ></a></li>
+									<li><a href="/lessons/FD-OF-1">Ordering fractions with the same numerator ></a></li>
+								</ul>
+							</li>
+						</ul>
+						<br/>
+					<h4>Most Recently Mastered Topics</h4>
+						<ul class="list-unstyled main-list">
+							<li>
+								<h6 id="list_3" class="list-toggle collapsed"> <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span> Multiplication (3 Topics)</h6>
+								<ul id="sublist_3">
+									<li><a href="/lessons/MD-M-0">One-digit multiplication ></a></li>
+									<li><a href="/lessons/MD-M-1">Multiplication by 10, 100, and 1000 ></a></li>
+									<li><a href="/lessons/MD-M-3">Multiplication without carry ></a></li>
+								</ul>
+							</li>
+						</ul>
+				</div>
+			</div>
+			<span class="col-md-1">&nbsp;</span>
+			<div class="col-md-5 red dashboard-panel">
+				<h2><span class="glyphicon glyphicon-star" aria-hidden="true"></span>&nbsp; Ranking</h2>
+				<div class="dashboard-wrapper white">
+					<h4>Class Standing: <strong>1st</strong></h4>
+					<h4>ALEKS Level: <strong>3</strong></h4>
+					<h4>Percent Mastery: <strong>80%</strong></h4>
+					<!-- <h4>Quick Tables: <strong>60% add, 40% mult</strong></h4> -->
+					<h4>Time Spent: <strong>50h 3m</strong></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{> footer}}
+</body>
+</html>

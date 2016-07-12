@@ -1,0 +1,75 @@
+{
+  "slices":[
+      {
+        "id": "I",
+        "title": "Lesson 1: Your Students",
+        "thumbnail":"/images/as.png",
+        "video": "https://www.youtube.com/embed/rBi01rgRVNE",
+        "first-color": "#F7941E",
+        "second-color": "#FFB358",
+        "topics":[
+          {
+            "id" : "I-T1",
+            "title": "How to foster the desire to learn",
+            "description": "[description]",
+            "video" : "https://www.youtube.com/embed/nuDf1kzm0kw",
+            "color": "#FFB358",
+            "topics":[
+              {
+                "id" : "I-T1-0",
+                "title": "Getting to know your students",
+                "description": "[description]",
+                "video": "https://www.youtube.com/embed/tgmvlP9BcGk"
+              },
+              {
+                "id" : "I-T1-1",
+                "title": "Student-centered environments",
+                "description": "[description]",
+                "video": "https://www.youtube.com/embed/tgmvlP9BcGk"
+              }
+            ]
+          },
+          {
+            "id" : "I-T2",
+            "title": "Cooperation",
+            "description": "[description]",
+            "video" : "https://www.youtube.com/embed/nuDf1kzm0kw",
+            "color": "#FFB358",
+            "topics":[
+              {
+                "id" : "I-T2-0",
+                "title": "Working as a team",
+                "description": "[description]",
+                "video": "https://www.youtube.com/embed/tgmvlP9BcGk"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "L1",
+        "title": "Lesson 2: Engaging your Class",
+        "thumbnail":"/images/md.png",
+        "video": "https://www.youtube.com/embed/rBi01rgRVNE",
+        "first-color": "#F05327",
+        "second-color": "#F69D84",
+        "topics":[
+          {
+            "id" : "L1-T1",
+            "title": "Making learning a sport",
+            "description": "[description]",
+            "video": "https://www.youtube.com/embed/vczu9agvF4g",
+            "color": "#F69D84",
+            "topics":[
+              {
+                "id" : "L1-T1-0",
+                "title": "Competition",
+                "description": "[description]",
+                "video": "https://www.youtube.com/embed/LD4zp8ruvaI"
+              }
+            ]
+          }
+        ]
+      }
+  ]
+}
